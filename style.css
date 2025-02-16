@@ -6,16 +6,51 @@ body{
     padding: 0;                                                                      /* Default Browser Behaviour */
 }
 
-.title{
-    font-size: 3rem;
-    text-align: center;
+header{
     background-color: hsl(0, 0%, 90%);
-    margin: 0;
-    padding-top: 1.5rem;
-    padding-bottom: 3rem;
 }
+#title{
+    font-size: 8rem;
+    margin: 0;
+    margin-left: 4rem;
+    text-align: left;
+    padding-top: 20vh;
+}
+#subtitle{
+    font-size: 2rem;
+    margin: 0;
+    margin-left: 4rem;
+    text-align: left;
+    padding-bottom: 50vh;
+    opacity: 0.8;
+}
+
 
 .container{
     border: 0.2rem solid hsl(0, 0%, 0%);
-    margin: 10px 0px;
+    margin: 10px 0px;                                                                                                                                                      
+}
+
+#about-container{
+    height: 60vh;
+    margin: 0;
+    border: 0;
+}
+#about-container h2{
+    margin-top: 4%;
+    margin-left: 4%;
+    font-size: 5rem;
+}
+#about-container p{
+    margin-left: 4%;
+    font-size: 3rem;
+}
+#about-container img{
+    position: relative;
+    margin-right: 10%;
+    margin-left: 3%;
+    float: right;
+    height: 80%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px hsla(0, 0%, 0%, 0.5);
 }
