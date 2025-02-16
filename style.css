@@ -1,0 +1,21 @@
+body{
+    background-color: hsl(0, 0%, 97%);
+    color: hsl(0, 0%, 20%);
+    font-family: sans-serif;
+    margin: 0;                                                                       /* This prevents */ 
+    padding: 0;                                                                      /* Default Browser Behaviour */
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+    background-color: hsl(0, 0%, 90%);
+    margin: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.container{
+    border: 0.2rem solid hsl(0, 0%, 0%);
+    margin: 10px 0px;
+}
