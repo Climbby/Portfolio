@@ -9,20 +9,39 @@ body{
 header{
     background-color: hsl(0, 0%, 90%);
 }
-#title{
-    font-size: 8rem;
+header *{
     margin: 0;
-    margin-left: 4rem;
-    text-align: left;
+    margin-right: 3vw;
+    text-align: right;
+}
+#title{
+    font-size: 8vw;
     padding-top: 20vh;
 }
 #subtitle{
-    font-size: 2rem;
-    margin: 0;
-    margin-left: 4rem;
-    text-align: left;
-    padding-bottom: 50vh;
+    font-size: 2vw;
+    padding-bottom: 40vh;
     opacity: 0.8;
+}
+#scroll-text{
+    font-size: 3vw;
+    margin: 0;
+    text-align: center;
+    opacity: 0.6;
+    padding-bottom: 5vh;    
+}
+header:hover #scroll-text{
+    animation: fade 2s infinite;
+}
+header:not(:hover) #scroll-text{
+    animation: fade 2s 1;
+}
+header hr{
+    margin: 0;
+}
+
+@keyframes fade{
+    50%{opacity: 1;}
 }
 
 
@@ -52,5 +71,9 @@ header{
     float: right;
     height: 80%;
     border-radius: 5px;
-    box-shadow: 10px 10px 20px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.5);
+}
+
+footer{
+    background-color: hsl(0, 0%, 90%);
 }
