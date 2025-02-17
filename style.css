@@ -39,7 +39,6 @@ header:not(:hover) #scroll-text{
 header hr{
     margin: 0;
 }
-
 @keyframes fade{
     50%{opacity: 1;}
 }
@@ -49,29 +48,20 @@ header hr{
     margin: 10px 0px;                                                                                                                                                      
 }
 
+/*
 #about-container{
-    height: 60vh;
     margin: 0;
-    border: 0;
 }
 #about-container h2{
     margin-top: 4%;
     margin-left: 4%;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 #about-container p{
     margin-left: 4%;
-    font-size: 3rem;
+    font-size: 1rem;
 }
-#about-container img{
-    position: relative;
-    margin-right: 10%;
-    margin-left: 3%;
-    float: right;
-    height: 80%;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.5);
-}
+*/
 
 footer{
     background-color: hsl(0, 0%, 90%);
