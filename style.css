@@ -1,12 +1,16 @@
 @font-face {
-    font-family: "Coolvetica";
-    src: url(Fonts/Coolvetica+Rg.otf);
+    font-family: "Coolvetica-Regular";
+    src: url(Fonts/Coolvetica-Regular.otf);
+}
+@font-face {
+    font-family: "Coolvetica-Condensed";
+    src: url(Fonts/Coolvetica-Condensed.otf);
 }
 
 body{
     background-color: hsl(0, 0%, 90%);
     color: hsl(0, 0%, 20%);
-    font-family: "Coolvetica", sans-serif;
+    font-family: "Coolvetica-Regular", sans-serif;
     font-size: 2vw;
     margin: 0;                                                                       /* This prevents */ 
     padding: 0;                                                                      /* Default Browser Behaviour */
@@ -68,6 +72,7 @@ header:not(:hover) #scroll-text{
     height: 25vh;
 }
 .container#profile p{
+    font-style: condensed;
     max-width: 50vw;
 }
 
