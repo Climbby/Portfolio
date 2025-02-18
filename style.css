@@ -74,7 +74,14 @@ header:not(:hover) #scroll-text{
     max-width: 50vw;
 }
 
-.container#conhecimentos{
+.container#projetos{
+    height: 80vh;
+}
+.container#projetos #title{
+    margin-top: 10vh;
+}
+
+.container#conhecimentos{  
     height: 35vh;
 }
 
@@ -89,4 +96,16 @@ header:not(:hover) #scroll-text{
 }
 .container#about #last{
     margin-bottom: 40vh;
+}
+
+footer{
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 90%);
+}
+footer #title{
+    padding-top: 10vh;
+    padding-bottom: 70vh;
+}
+footer #email{
+    padding-bottom: 10vh;
 }
