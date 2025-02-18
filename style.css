@@ -2,10 +2,6 @@
     font-family: "Coolvetica-Regular";
     src: url(Fonts/Coolvetica-Regular.otf);
 }
-@font-face {
-    font-family: "Coolvetica-Condensed";
-    src: url(Fonts/Coolvetica-Condensed.otf);
-}
 
 body{
     background-color: hsl(0, 0%, 90%);
@@ -64,23 +60,21 @@ header:not(:hover) #scroll-text{
     50%{opacity: 1;}
 }
 
-.container#profile{
+.container#profile, .container#conhecimentos{
     display: flex;
     align-items: center;
     background: linear-gradient(to right, hsl(203, 100%, 55%), hsl(203, 93%, 65%));
     color: hsl(0, 0%, 90%);
+}
+
+.container#profile{
     height: 25vh;
 }
 .container#profile p{
-    font-style: condensed;
     max-width: 50vw;
 }
 
 .container#conhecimentos{
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to right, hsl(203, 100%, 55%), hsl(203, 93%, 65%));
-    color: hsl(0, 0%, 90%);
     height: 35vh;
 }
 
