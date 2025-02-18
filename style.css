@@ -1,19 +1,27 @@
 @font-face {
-    font-family: "Vogue";
-    src: url(Fonts/Vogue.ttf);
+    font-family: "Coolvetica";
+    src: url(Fonts/Coolvetica+Rg.otf);
 }
 
 body{
-    background-color: hsl(0, 0%, 97%);
+    background-color: hsl(0, 0%, 90%);
     color: hsl(0, 0%, 20%);
-    font-family: sans-serif;
+    font-family: "Coolvetica", sans-serif;
+    font-size: 2vw;
     margin: 0;                                                                       /* This prevents */ 
     padding: 0;                                                                      /* Default Browser Behaviour */
 }
-
-header{
-    background-color: hsl(0, 0%, 90%);
+body h2{
+    font-size: 2.3vw;
+    letter-spacing: 0.1vw;
 }
+main{
+    background-color: hsl(0, 0%, 97%);
+}
+hr{
+    margin: 0;
+}
+
 header *{
     margin: 0;
     margin-right: 3vw;
@@ -22,27 +30,27 @@ header *{
 #title{
     font-size: 8vw;
     padding-top: 20vh;
+    letter-spacing: 0.3vw;
 }
 #subtitle{
     font-size: 2vw;
     padding-bottom: 40vh;
     opacity: 0.8;
+    letter-spacing: 0.1vw;
 }
 #scroll-text{
     font-size: 3vw;
     margin: 0;
     text-align: center;
     opacity: 0.6;
-    padding-bottom: 5vh;    
+    padding-bottom: 5vh; 
+    letter-spacing: 0.1vw;   
 }
 header:hover #scroll-text{
     animation: fade 2s infinite;
 }
 header:not(:hover) #scroll-text{
     animation: fade 2s 1;
-}
-header hr{
-    margin: 0;
 }
 @keyframes fade{
     50%{opacity: 1;}
@@ -53,28 +61,17 @@ header hr{
     margin: 10px 0px;                                                                                                                                                      
 }
 
-#about-container{
-    margin: 0;
+#about-container strong{
+    letter-spacing: 0.05vw;
 }
 #about-container h2{
-    margin: 0;
     margin-top: 40vh;
     margin-left: 10vw;
-    font-size: 1.7rem;
-    font-family: "Vogue", serif;
-    font-weight: 700;
 }
 #about-container p{
     margin-top: 4vh;
     margin-left: 10vw;
-    font-size: 1.5rem;
-    font-family: "Vogue", serif;
-    font-weight: 500;
 }
 #about-container #last{
     margin-bottom: 40vh;
-}
-
-footer{
-    background-color: hsl(0, 0%, 90%);
 }
