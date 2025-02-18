@@ -85,9 +85,10 @@ header:not(:hover) #scroll-text{
     height: 35vh;
 }
 
-.container#about strong{
+.container#about strong{ /* TESTE !!!!!!!!!!!!!!!*/
     letter-spacing: 0.05vw;
-}
+    text-shadow: 0px 2px 0px hsl(203, 93%, 85%); 
+}  
 .container#about h2{
     margin-top: 40vh;
 }
