@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Vogue";
+    src: url(Fonts/Vogue.ttf);
+}
+
 body{
     background-color: hsl(0, 0%, 97%);
     color: hsl(0, 0%, 20%);
@@ -48,20 +53,27 @@ header hr{
     margin: 10px 0px;                                                                                                                                                      
 }
 
-/*
 #about-container{
     margin: 0;
 }
 #about-container h2{
-    margin-top: 4%;
-    margin-left: 4%;
-    font-size: 2rem;
+    margin: 0;
+    margin-top: 40vh;
+    margin-left: 10vw;
+    font-size: 1.7rem;
+    font-family: "Vogue", serif;
+    font-weight: 700;
 }
 #about-container p{
-    margin-left: 4%;
-    font-size: 1rem;
+    margin-top: 4vh;
+    margin-left: 10vw;
+    font-size: 1.5rem;
+    font-family: "Vogue", serif;
+    font-weight: 500;
 }
-*/
+#about-container #last{
+    margin-bottom: 40vh;
+}
 
 footer{
     background-color: hsl(0, 0%, 90%);
