@@ -17,6 +17,10 @@ body *{
 body h2{
     font-size: 2.3vw;
     letter-spacing: 0.1vw;
+    margin-left: 10vw;
+}
+header #title, body p{
+    margin-left: 10vw;
 }
 main{
     background-color: hsl(0, 0%, 97%);
@@ -25,26 +29,26 @@ main{
 header *{
     margin: 0;
     margin-right: 3vw;
-    text-align: right;
+    text-align: left;
 }
-#title{
+header #title{
     font-size: 8vw;
     padding-top: 20vh;
     letter-spacing: 0.3vw;
 }
-#subtitle{
+header #subtitle{
     font-size: 2vw;
     padding-bottom: 40vh;
-    opacity: 0.8;
     letter-spacing: 0.1vw;
+    opacity: 0.8;
 }
-#scroll-text{
+header #scroll-text{
     font-size: 2.5vw;
     margin: 0;
     text-align: center;
-    opacity: 0.6;
     padding-bottom: 5vh; 
     letter-spacing: 0.1vw;   
+    opacity: 0.6;
 }
 header:hover #scroll-text{
     animation: fade 2s infinite;
@@ -56,26 +60,34 @@ header:not(:hover) #scroll-text{
     50%{opacity: 1;}
 }
 
-.container{
-    border: 0.2rem solid hsl(0, 0%, 0%);
-    margin: 10px 0px;                                                                                                                                                      
-}
-
 .container#profile{
-    background-color: aqua;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, hsl(203, 100%, 55%), hsl(203, 93%, 65%));
+    color: hsl(0, 0%, 90%);
+    height: 25vh;
+}
+.container#profile p{
+    max-width: 50vw;
 }
 
-#about-container strong{
+.container#conhecimentos{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, hsl(203, 100%, 55%), hsl(203, 93%, 65%));
+    color: hsl(0, 0%, 90%);
+    height: 35vh;
+}
+
+.container#about strong{
     letter-spacing: 0.05vw;
 }
-#about-container h2{
+.container#about h2{
     margin-top: 40vh;
-    margin-left: 10vw;
 }
-#about-container p{
+.container#about p{
     margin-top: 4vh;
-    margin-left: 10vw;
 }
-#about-container #last{
+.container#about #last{
     margin-bottom: 40vh;
 }
