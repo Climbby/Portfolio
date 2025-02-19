@@ -87,7 +87,6 @@ header:not(:hover) #scroll-text{
 
 .container#about strong{ /* TESTE !!!!!!!!!!!!!!!*/
     letter-spacing: 0.05vw;
-    text-shadow: 0px 2px 0px hsl(203, 93%, 85%); 
 }  
 .container#about h2{
     margin-top: 40vh;
@@ -96,7 +95,7 @@ header:not(:hover) #scroll-text{
     margin-top: 4vh;
 }
 .container#about #last{
-    margin-bottom: 40vh;
+    padding-bottom: 40vh;
 }
 
 footer{
@@ -105,8 +104,21 @@ footer{
 }
 footer #title{
     padding-top: 10vh;
-    padding-bottom: 70vh;
 }
 footer #email{
     padding-bottom: 10vh;
+}
+footer a{
+    display: flex;
+    text-decoration: none;
+    color: hsl(0, 0%, 90%);
+}
+footer #email, footer #arrow{
+    height: 5.5vh;
+}
+footer #github{
+    margin-left: auto;
+    margin-right: 10vw;
+    width: 6vw;
+    height: auto;
 }
