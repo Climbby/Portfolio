@@ -1,1 +1,1 @@
-Here you can find my terrible code for my first website
+Here you can find my *not so good* code for my first website
