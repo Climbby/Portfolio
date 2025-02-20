@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Coolvetica-Regular";
     src: url(Fonts/Coolvetica-Regular.otf);
+    font-display: swap;
 }
 
 body{
