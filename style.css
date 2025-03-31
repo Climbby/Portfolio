@@ -69,10 +69,20 @@ header:not(:hover) #scroll-text{
 }
 
 .container#profile{
+    position: relative;
     height: 25vh;
 }
 .container#profile p{
     max-width: 50vw;
+}
+.container#profile a{
+    position: absolute;
+    text-decoration: none;
+    color: inherit;
+    right: 12vw;
+    padding: 2vh 4vw;
+    color: hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 97%);
 }
 
 .container#projetos{
@@ -196,13 +206,18 @@ footer #title{
     position: absolute;
     padding-top: 7vh;
 }
-footer #github{
+footer #github, footer #linkedin{
     position: absolute;
-    right: 10vw;
     top: 50%;                               /* Top edge at 50% of the height */
     transform: translateY(-50%);            /* Image up 50% it's own height */
     width: 6vw;
     height: auto;
+}
+footer #github{
+    right: 25vw;    
+}
+footer #linkedin{
+    right: 10vw;
 }
 footer #email-link{
     position: absolute;
