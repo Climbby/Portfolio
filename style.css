@@ -100,14 +100,15 @@ header:not(:hover) #scroll-text{
 
 .card{
     position: relative;
+    display: inline-block;
     border: 0.1vw solid hsl(0, 0%, 80%);
     border-radius: 5%;
     box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.1);
     height: 60vh;
     width: 35vw;
-    margin: 5vh 10vw;
+    margin: 5vh 9.5vw;
+    margin-right: 0;
     margin-top: 22vh;
-    display: inline-block;
 }
 .card:hover{
     animation: showUp 0.5s 1;
@@ -147,10 +148,13 @@ header:not(:hover) #scroll-text{
     margin-bottom: 2%;
 }
 .card #html{
-    margin-right: 12%;
+    margin-right: 2%;
 }
 .card #css{
-    margin-right: 2%;
+    margin-right: 12%;
+}
+.card #js{
+    margin-right: 22%;
 }
 .card #github{
     width: 7vh;
