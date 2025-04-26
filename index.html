@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-    <meta charset="UTF-8">                                                                  <!-- Ensures character compatibility, like: $ £ €-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">                  <!-- Keeps mobile responsiveness -->
+<meta charset="UTF-8">                                                                  <!-- Ensures character compatibility, like: $ £ €-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">                  <!-- Keeps mobile responsiveness -->
     <meta name="description" content="Portfolio de Francisco Fernandes">                                
     <title>Francisco Fernandes</title>
     <link rel="icon" href="Images/favIcon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
-                                                                                            <!-- The reason we put code in the <head>, is
-                                                                                            because it processes the code before loading the 
-                                                                                            page, so we prevent showing a flash of an ugly 
-                                                                                            website -->
+                                                                                        <!-- The reason we put code in the <head>, is
+                                                                                        because it processes the code before loading the 
+                                                                                        page, so we prevent showing a flash of an ugly 
+                                                                                        website -->
 
 <body>
     <header>
@@ -22,63 +22,114 @@
     </header>
 
     <main>
-        <div id="profile" class="container">
+        <section id="profile" class="container">
             <p> Tento consolidar os meus conhecimentos antes de experimentar novas ferramentas, no 
                 entanto, adoro conhecer mais e fazer parte de novos projetos inovadores.</p>
             <a href="MeuCurriculo.pdf" download="FranciscoFernandes_Curriculo">
                 <div>Curriculo</div>
             </a>
-        </div>
+        </section>
 
-        <div id="projetos" class="container">
-            <h2 id="title">PROJETOS</h2>
-            <div class="card">
-                <h2>Portfolio</h2>
-                <h3>02/2025</h3>
-                <p>O website que vês agora</p>
-                <hr>
-                <a href="https://github.com/Climbby/Portfolio" target="_blank">
-                    <img id="github" src="Images/Github.svg" alt="Github">
-                </a>
-                <img id="first" src="Images/html.svg" alt="HTML">
-                <img id="second" src="Images/css.svg" alt="CSS">
+        <section id="projetos" class="container">
+            <div id="titles-container">
+                <h2 class="title active" id="projetos">PROJETOS</h2>
+                <h2 class="title" id="visao-geral">VISÃO GERAL</h2>
+                <h2 class="title" id="demonstracao">DEMONSTRAÇÃO</h2>
+                <h2 class="title" id="tecnologias">TECNOLOGIAS</h2>
             </div>
-            <div class="card">
-                <h2>GuessIt</h2>
-                <h3>03/2025</h3>
-                <p>Um jogo onde podes advinhar o utilizador do dia</p>
-                <hr>
-                <a href="https://github.com/Climbby/GuessIt_front" target="_blank">
-                    <img id="github" src="Images/Github.svg" alt="Github">
-                </a>
-                <img id="first" src="Images/html.svg" alt="HTML">
-                <img id="second" src="Images/css.svg" alt="CSS">
-                <img id="third" src="Images/javascript.svg" alt="JS">
-            </div>
-            <div class="card">
-                <h2>TheBridger</h2>
-                <h3>04/2025</h3>
-                <p>Um chat bot feito a usar a librarias do Discord, em que através de programação com classes, é possível simular um jogo
-                    de "TheBridge"
-                </p>
-                <hr>
-                <a href="https://github.com/Climbby/TheBridger" target="_blank">
-                    <img id="github" src="Images/Github.svg" alt="Github">
-                </a>
-                <img id="first" src="Images/python.svg" alt="PYTHON">
-            </div>
-        </div>
 
-        <div id="conhecimentos" class="container">
+            <div class="seccao projetos">
+                <div class="card-outline active">
+                    <article class="card" id="portfolio">
+                        <img src="Images/portfolioImg2.jpg" alt="Portfolio">
+                        <hr>
+                        <h3>Portfolio</h3>
+                    </article>
+                </div>
+
+                <div class="card-outline">
+                    <article class="card" id="guessit">
+                        <img src="Images/guessitImg.jpg" alt="GuessIt">
+                        <hr>
+                        <h3>GuessIt</h3>
+                    </article>
+                </div>
+
+                <div class="card-outline">
+                    <article class="card" id="thebridger">
+                        <img src="Images/bridgerImg.jpg" alt="TheBridger">
+                        <hr>
+                        <h3>TheBridger</h3>
+                    </article>
+                </div>
+            </div>
+
+            <div class="seccao visao-geral">
+                <article id="portfolio">
+                    Começado em Fevereiro de 2025, este é o meu primeiro projeto e website, o meu portfólio. Aqui podes ver um pouco
+                    sobre mim, o meu currículo, conhecimentos atuais, disponibilizo também os meus perfis e formas de me contactar, mas 
+                    o principal foco deste portfólio, é a exposição dos meus mais trabalhados projetos. Quando selecionas um dos meus 
+                    projetos, consegues também ver a sua descrição, algumas imagens juntamente com o seu acesso, e as linguagens ou 
+                    tecnologias usadas para a realização de cada um.
+                </article>
+                <article id="guessit">
+                    Foi começado em Março de 2025 o meu primeiro website funcional e jogo, o guessit. É um jogo baseado no wordle, em que
+                    ganhas se o jogador escolhido secretamente e aleatóriamente, corresponder ao jogador que introduziste. Quando
+                    introduzes um jogador, são mostradas caixas com as características e uma cor, em que verde significa certo, e vermelho
+                    significa errado. Ganhas o jogo quando todas as caixas ficarem verdes.                    
+                </article>
+                <article id="thebridger">
+                    Tendo-se iniciado em Abril de 2025, este é um chat-bot feito com recurso ao python e librarias externas, o TheBridger.
+                    O TheBridger, que foi feito para ser um bot no Discord, tem como objetivo simular um jogo de The Bridge. Este bot foi
+                    criado porque o modo de jogo mencionado, muitas vezes não alcança o mínimo de jogadores necessários para começar.
+
+                    As tuas decisões importam! Tens que fazer as escolhas certas, que alterarão as probabilidades de acontecerem certos
+                    eventos, e tens que destruir o Nexus dos oponentes.
+
+                </article>
+            </div>
+
+            <div class="seccao demonstracao">
+                <article id="portfolio">
+                    <a href="https://climbby.github.io/Portfolio/" target="_blank">
+                        <img src="Images/Github.svg" alt="Portfolio">
+                    </a>
+                </article>
+                <article id="guessit">
+                    <a href="https://climbby.github.io/GuessIt_front/" target="_blank">
+                        <img src="Images/Github.svg" alt="GuessIt">
+                    </a>
+                </article>
+                <article id="thebridger">
+                    <a href="https://github.com/Climbby/TheBridger" target="_blank">
+                        <img src="Images/Github.svg" alt="TheBridger">
+                    </a>
+                </article>
+            </div>
+
+            <div class="seccao tecnologias">
+                <article id="portfolio">
+                    HTML, CSS
+                </article>
+                <article id="guessit">
+                    HTML, CSS, JS, VERCEL, NEON
+                </article>
+                <article id="thebridger">
+                    PYTHON
+                </article>
+            </div>
+        </section>
+
+        <section id="conhecimentos" class="container">
             <p> Front-end: HTML, CSS, JavaScript e React <br>
                 Databases: MongoDB e MySQL <br>
                 Version Control: Git <br>
                 Back-end: Python
             </p>
             <h2>CONHECIMENTOS</h2>
-        </div>
+        </section>
         
-        <div id="about", class="container">
+        <section id="about", class="container">
             <h2>SOBRE MIM</h2> 
 
             <p> Sou o Francisco, <strong>tenho 18 anos</strong> e estou neste momento a viver em Coimbra para me <br> 
@@ -87,7 +138,7 @@
                 estou no meu primeiro ano.                      </p> 
             <p id="last"> À parte da programação, tenho praticado <strong>dalitografia, gosto de publicar conteúdo<br> 
                 digital</strong> e de <strong>competir em torneios de Xadrez</strong>.</p>
-        </div>
+        </section>
     </main>
 
     <footer>
@@ -104,5 +155,6 @@
         </a>
     </footer>
 
+    <script src="index.js"></script>
 </body>
 </html>
