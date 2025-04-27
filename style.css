@@ -113,6 +113,12 @@ header:not(:hover) #scroll-text{
 }
 .container#projetos .seccao{
     position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+}
+.container#projetos .seccao #github{
+    position: absolute;
+    right: 9vw;
 }
 .container#projetos .seccao.projetos{
     display: grid;
@@ -124,9 +130,20 @@ header:not(:hover) #scroll-text{
 }
 .container#projetos .seccao.visao-geral article{
     display: none;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    padding-top: 60px;
+    text-align: justify;
 }
 .container#projetos .seccao.demonstracao article{
     display: none;
+}
+.container#projetos .seccao.demonstracao article #link{
+    position: absolute;
+    text-decoration: none;
+    color: inherit;
+    font-size: 30px;
+    padding-left: 9vw;
 }
 .container#projetos .seccao.tecnologias article{
     display: none;

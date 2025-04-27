@@ -1,34 +1,39 @@
 const cardsOutline = document.querySelectorAll('.card-outline')
 const seccoes = document.querySelectorAll('#projetos .seccao')
+const titlesContainer = document.querySelector('#projetos #titles-container')
 const titles = document.querySelectorAll('#projetos #titles-container .title')
 const projetos = document.querySelector('.container#projetos')
+const githubs = document.querySelectorAll('.container#projetos .seccao #github')
+const articleLinks = document.querySelectorAll('.container#projetos .seccao.demonstracao article #link')
 let card_id = "portfolio"
-let title_id = "projetos";
+let title_id = "projetos"
+let maxHeight = 0
 
 function calculate_size(){
     const projetos__seccao = document.querySelector('#projetos .seccao.projetos')
     projetos__seccao.style.visibility = 'hidden'
     projetos__seccao.style.display = 'grid'
-    let maxHeight = projetos__seccao.offsetHeight
+    maxHeight = projetos__seccao.offsetHeight
     projetos__seccao.style.visibility = 'visible'
     if (title_id !== "projetos") projetos__seccao.style.display = 'none'
-
-    // seccoes.forEach(seccao => {
-    //     seccao.style.visibility = 'hidden'
-    //     if (seccao.classList.contains("projetos")){
-    //         seccao.style.display = 'grid'
-    //     }
-    //     maxHeight = Math.max(maxHeight ,seccao.offsetHeight)
-    //     if(seccao.classList.contains("projetos") && title_id !== "projetos"){
-    //         seccao.style.display = 'none'
-    //     }
-    // })
-
-    // seccoes.forEach(seccao => {
-    //     seccao.style.visibility = 'visible'
-    // })
-    
     projetos.style.paddingBottom = `${maxHeight}px`
+    git_pos()
+    links_pos()
+}
+
+function git_pos(){
+    
+    githubs.forEach(github => {
+        let zeroHeight = maxHeight - github.offsetHeight
+        github.style.top = `${zeroHeight - 50}px`
+    })
+}
+function links_pos(){
+    
+    articleLinks.forEach(link => {
+        let zeroHeight = maxHeight - link.offsetHeight
+        link.style.top = `${zeroHeight - 50}px`
+    })
 }
 
 // show border based on selected project
@@ -78,6 +83,8 @@ titles.forEach(title => {
                 
             case "demonstracao":
                 content.style.display = "inline-block"
+                git_pos()
+                links_pos()
                 break
 
             case "tecnologias":
