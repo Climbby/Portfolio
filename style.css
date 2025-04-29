@@ -147,7 +147,33 @@ header:not(:hover) #scroll-text{
 }
 .container#projetos .seccao.tecnologias article{
     display: none;
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    padding: 60px 80px;
+    justify-items: center;
 }
+.container#projetos .seccao.tecnologias article img{
+    width: 96px;
+}
+.container#projetos .seccao.tecnologias article img:hover{
+    transform: scale(1.1);
+}
+/* .container#projetos .seccao.tecnologias article #CSS:hover{
+    width: 96px;
+}
+.container#projetos .seccao.tecnologias article #JS:hover{
+    width: 96px;
+}
+.container#projetos .seccao.tecnologias article #Vercel:hover{
+    width: 96px;
+}
+.container#projetos .seccao.tecnologias article #PostgreSQL:hover{
+    width: 96px;
+}
+.container#projetos .seccao.tecnologias article #Python:hover{
+    width: 96px;
+} */
 .card{
     position: relative;
     display: inline-block;

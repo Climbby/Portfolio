@@ -88,7 +88,7 @@ titles.forEach(title => {
                 break
 
             case "tecnologias":
-                content.style.display = "inline-block"
+                content.style.display = "grid"
         }   
 
         // set the title markdown
