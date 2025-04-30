@@ -16,7 +16,10 @@ function calculate_size(){
     maxHeight = projetos__seccao.offsetHeight
     projetos__seccao.style.visibility = 'visible'
     if (title_id !== "projetos") projetos__seccao.style.display = 'none'
-    projetos.style.paddingBottom = `${maxHeight}px`
+    projetos.style.height = `${titlesContainer.offsetHeight + maxHeight}px`
+    seccoes.forEach(seccao => {
+        seccao.style.height = `${maxHeight}px`
+    });
     git_pos()
     links_pos()
 }
@@ -55,17 +58,18 @@ titles.forEach(title => {
         
         title_id = title.id
         let portfolio_content = document.querySelector(`.seccao.${title_id}`)
+        let seccao_content = document.querySelector(`.seccao.${title_id}`)
         let content = document.querySelector(`.seccao.${title_id} #${card_id}`)
 
         // show content based on selected title
         seccoes.forEach(seccao => {
-
             if (seccao.classList.contains("projetos")){
                 if (title_id === "projetos") return
                 seccao.style.display = "none"
                 return
             }
-
+            
+            seccao.style.display = "none"
             articles = seccao.querySelectorAll("article")
             articles.forEach(article => {
                 article.style.display = "none"
@@ -74,20 +78,23 @@ titles.forEach(title => {
 
         switch (title_id) {
             case "projetos":  
-                portfolio_content.style.display = "grid"
+                seccao_content.style.display = "grid"
                 break
                 
             case "visao-geral":
+                seccao_content.style.display = "block"
                 content.style.display = "inline-block"
                 break
                 
             case "demonstracao":
+                seccao_content.style.display = "block"
                 content.style.display = "inline-block"
                 git_pos()
                 links_pos()
                 break
 
             case "tecnologias":
+                seccao_content.style.display = "block"
                 content.style.display = "grid"
         }   
 
