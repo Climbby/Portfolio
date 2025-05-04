@@ -100,4 +100,5 @@ function change_content(){
 }
 
 calculate_size()
+change_content()
 window.addEventListener('resize', calculate_size)
