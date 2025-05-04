@@ -88,9 +88,64 @@ header:not(:hover) #scroll-text{
 .container#projetos{
     position: relative;
 }
+.container#projetos #the-projetos{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    padding: 20px 80px;
+    justify-items: center;
+    background-color: hsl(0, 0%, 90%);
+    /* color: hsl(0, 0%, 90%); */
+    overflow: auto;
+}
+.card{
+    position: relative;
+    display: inline-block;
+    border: 5px solid hsl(0, 0%, 20%);
+    border-radius: 30px;
+    
+    background-color: hsl(0, 0%, 80%);
+    overflow: hidden;
+}
+.card-outline{
+    position: relative;
+}
+.card-outline::after{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -1px;
+    border: 6px solid rgb(118, 249, 118);
+    border-radius: 40px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-outline:hover{ 
+    transform: translateY(-2%) scale(1.01, 1.01);
+}
+.card-outline.active::after{
+    opacity: 1;
+}
+.card *{
+    margin: 0;
+}
+.card img{
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}
+.card h3{
+    margin: 5% 10%;
+    font-size: 30px;
+}
+
 .container#projetos #titles-container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 0px;
     padding: 50px 30px;
     padding-bottom: 0px;
@@ -120,13 +175,8 @@ header:not(:hover) #scroll-text{
     position: absolute;
     right: 9vw;
 }
-.container#projetos .seccao.projetos{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-column-gap: 80px;
-    grid-row-gap: 80px;
-    padding: 100px 80px;
-    justify-items: center;
+.container#projetos .seccao.visao-geral{
+    display: block;
 }
 .container#projetos .seccao.visao-geral article{
     display: none;
@@ -169,6 +219,9 @@ header:not(:hover) #scroll-text{
     bottom: 80px;
     left: 50%;
     margin-left: 0px;
+    font-size: 60px;
+    color: var(--item-color, hsl(0, 0%, 20%));
+    border-bottom: 4px solid hsl(203, 93%, 85%); /* blue markdown */
     transform: translateX(-50%);
     opacity: 0;
 }
@@ -177,52 +230,6 @@ header:not(:hover) #scroll-text{
 }
 .container#projetos .seccao.tecnologias article img:hover + .image-text{
     opacity: 1;
-}
-
-
-.card{
-    position: relative;
-    display: inline-block;
-    border: 1px solid hsl(0, 0%, 80%);
-    border-radius: 30px;
-    
-    overflow: hidden;
-}
-.card-outline{
-    position: relative;
-}
-.card-outline::after{
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -1px;
-    border: 6px solid rgb(118, 249, 118);
-    border-radius: 40px;
-    opacity: 0;
-    pointer-events: none;
-}
-.card-outline:hover{ 
-    transform: translateY(-2%) scale(1.01, 1.01);
-}
-.card-outline.active::after{
-    opacity: 1;
-}
-.card *{
-    margin: 0;
-}
-.card img{
-    display: block;
-    width: 100%;
-    pointer-events: none;
-}
-.card h3{
-    margin: 5% 10%;
-    font-size: 30px;
-}
-.card hr{
-    width: 100%;
 }
 
 .container#conhecimentos{  
