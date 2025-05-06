@@ -5,9 +5,14 @@ const titles = document.querySelectorAll('#projetos #titles-container .title')
 const projetos = document.querySelector('.container#projetos')
 const githubs = document.querySelectorAll('.container#projetos .seccao #github')
 const articleLinks = document.querySelectorAll('.container#projetos .seccao.demonstracao article #link')
+const demonstracaoArticles = document.querySelectorAll('.container#projetos .seccao.demonstracao article')
+const prevBtns = document.querySelectorAll('.carousel-control.prev');
+const nextBtns = document.querySelectorAll('.carousel-control.next');
+let demonstracaoArticlesDictionary = {}
 let card_id = "portfolio"
 let title_id = "visao-geral"
 
+// sets size for each section
 function calculate_size(){
     const projetos__seccao = document.querySelector('#projetos #the-projetos')
     projetos.style.height = `${titlesContainer.offsetHeight + projetos__seccao.offsetHeight + 500}px`
@@ -17,7 +22,7 @@ function calculate_size(){
     git_pos()
     links_pos()
 }
-
+//sets git position in sections
 function git_pos(){
     
     githubs.forEach(github => {
@@ -25,6 +30,7 @@ function git_pos(){
         github.style.top = `${zeroHeight - 50}px`
     })
 }
+//sets project link position in demonstration
 function links_pos(){
     
     articleLinks.forEach(link => {
@@ -65,12 +71,50 @@ titles.forEach(title => {
   })
 })
 
+// sets carousel buttons functionality
+demonstracaoArticles.forEach(article => {
+    let prevButton = article.querySelector('.carousel-control.prev')
+    let nextButton = article.querySelector('.carousel-control.next')
+    let images = article.querySelectorAll('.carousel img')
+    let dAD = demonstracaoArticlesDictionary
+
+    dAD[article.id] = [0, 0, images.length - 1]
+    // values are   = [min, current_image, max]
+
+    prevButton.addEventListener('click', () => {
+        if(dAD[article.id][1] == dAD[article.id][0]) return 
+        dAD[article.id][1]++
+
+        images.forEach(image => {
+            image.style.transform = `translateY(${dAD[article.id][1] * 100}%)`
+        });
+
+        nextButton.style.visibility = 'visible';
+        if(dAD[article.id][1] == dAD[article.id][0]){
+            prevButton.style.visibility = 'hidden';
+        }
+    })
+    nextButton.addEventListener('click', () => {
+        if(dAD[article.id][1] == -dAD[article.id][2]) return
+        dAD[article.id][1]--
+
+        images.forEach(image => {
+            image.style.transform = `translateY(${dAD[article.id][1] * 100}%)`
+        });
+
+        prevButton.style.visibility = 'visible';
+        if(dAD[article.id][1] == -dAD[article.id][2]){
+            nextButton.style.visibility = 'hidden';
+        }
+    })
+});
+
+// show content based on selected title/tab selected
 function change_content(){
 
     let seccao_content = document.querySelector(`.seccao.${title_id}`)
     let content = document.querySelector(`.seccao.${title_id} #${card_id}`)
 
-    // show content based on selected title
     seccoes.forEach(seccao => {        
         seccao.style.display = "none"
         articles = seccao.querySelectorAll("article")
@@ -99,6 +143,6 @@ function change_content(){
 
 }
 
-calculate_size()
-change_content()
+calculate_size() // sets size for each section
+change_content() // show content based on active title (first tab by default)
 window.addEventListener('resize', calculate_size)
