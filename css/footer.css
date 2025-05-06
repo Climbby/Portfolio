@@ -1,0 +1,38 @@
+footer{
+    position: relative;
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 90%);
+    height: 30vh;
+    padding-bottom: 5vh;
+}
+footer #title{
+    position: absolute;
+    padding-top: 7vh;
+}
+footer #github, footer #linkedin{
+    position: absolute;
+    top: 50%;                               /* Top edge at 50% of the height */
+    transform: translateY(-50%);            /* Image up 50% it's own height */
+    width: 6vw;
+    height: auto;
+}
+footer #github{
+    right: 25vw;    
+}
+footer #linkedin{
+    right: 10vw;
+}
+footer #email-link{
+    position: absolute;
+    display: flex;
+    text-decoration: none;
+    color: hsl(0, 0%, 90%);
+    bottom: 5vh;
+    margin-left: 10vw;
+}
+footer #email{
+    margin-left: 0;
+}
+footer #arrow{
+    height: 5.5vh;
+}

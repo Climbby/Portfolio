@@ -1,0 +1,23 @@
+.container#profile, .container#conhecimentos{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, hsl(203, 100%, 55%), hsl(203, 93%, 65%));
+    color: hsl(0, 0%, 90%);
+}
+
+.container#profile{
+    position: relative;
+    height: 25vh;
+}
+.container#profile p{
+    max-width: 50vw;
+}
+.container#profile a{
+    position: absolute;
+    text-decoration: none;
+    color: inherit;
+    right: 12vw;
+    padding: 2vh 4vw;
+    color: hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 97%);
+}

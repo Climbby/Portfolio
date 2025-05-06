@@ -1,0 +1,187 @@
+.container#projetos{
+    position: relative;
+}
+.container#projetos #the-projetos{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    padding: 20px 80px;
+    justify-items: center;
+    background-color: hsl(0, 0%, 90%);
+    overflow: auto;
+}
+.card{
+    position: relative;
+    display: inline-block;
+    border: 5px solid hsl(0, 0%, 20%);
+    border-radius: 30px;
+    
+    background-color: hsl(0, 0%, 80%);
+    overflow: hidden;
+}
+.card-outline{
+    position: relative;
+}
+.card-outline::after{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -1px;
+    border: 6px solid rgb(118, 249, 118);
+    border-radius: 40px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-outline:hover{ 
+    transform: translateY(-2%) scale(1.01, 1.01);
+}
+.card-outline.active::after{
+    opacity: 1;
+}
+.card *{
+    margin: 0;
+}
+.card img{
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}
+.card h3{
+    margin: 5% 10%;
+    font-size: 30px;
+}
+
+.container#projetos #titles-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    padding: 50px 30px;
+    padding-bottom: 0px;
+    justify-items: center;
+}
+.container#projetos .title{
+    display: inline-block; /* for blue markdown to stay in place */
+    border-bottom: 0.5vh solid hsl(0, 0%, 80%); /* blue markdown */
+    line-height: 0.9;
+    
+    margin-left: 0px;
+}
+.container#projetos .title:hover{
+    transform: translateY(-2%) scale(1.01, 1.01);
+    cursor: pointer;
+}
+.container#projetos .active.title{
+    border-bottom: 0.5vh solid hsl(203, 93%, 85%); /* blue markdown */
+}
+.container#projetos .seccao{
+    display: none;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+}
+.container#projetos .seccao #github{
+    position: absolute;
+    right: 9vw;
+    z-index: 1;
+}
+.container#projetos .seccao #github:hover{
+    transform: translateY(-5%);
+}
+.container#projetos .seccao.visao-geral{
+    display: block;
+}
+.container#projetos .seccao.visao-geral article{
+    display: none;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    padding-top: 60px;
+    text-align: justify;
+}
+.container#projetos .seccao.demonstracao article{
+    display: none;
+    width: 100%;
+}
+.container#projetos .seccao.demonstracao article #link{
+    width: 100%;
+    position: absolute;
+    text-decoration: none;
+    color: hsl(0, 0%, 70%);
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    font-size: 30px;
+    padding-left: 9vw;
+}
+.container#projetos .seccao.demonstracao article #link:hover{
+    transform: translateY(-10%) ;
+}
+.carousel{
+    position: relative;
+    width: min(500px, 30vw);
+    aspect-ratio: 16/9;
+    margin: 60px auto;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.1);
+    border-radius: 5px;
+}
+.carousel img{
+    display: block; /* to remove whitespace between images */
+    width: 100%;
+}
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { 
+    visibility: hidden;
+    left: 10px; 
+}
+.next { 
+    right: 10px; 
+}
+.container#projetos .seccao.tecnologias article{
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    grid-row-gap: 80px;
+    grid-column-gap: 0px;
+    padding: 0px 80px;
+    height: 100%;
+    justify-items: center;
+}
+.container#projetos .seccao.tecnologias article .image-wrapper{
+    pointer-events: none;
+}
+.container#projetos .seccao.tecnologias article img{
+    position: absolute;
+    top: 60px;
+    transform: translateX(-50%);
+    width: 96px;
+    pointer-events: auto;
+}
+.container#projetos .seccao.tecnologias .image-text{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    margin-left: 0px;
+    font-size: 60px;
+    color: var(--item-color, hsl(0, 0%, 20%));
+    border-bottom: 4px solid hsl(203, 93%, 85%); /* blue markdown */
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.container#projetos .seccao.tecnologias img:hover{
+    transform: translateX(-50%) scale(1.1);
+}
+.container#projetos .seccao.tecnologias img:hover + .image-text{
+    opacity: 1;
+}

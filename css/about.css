@@ -1,0 +1,15 @@
+.container#about strong{
+    letter-spacing: 0.05vw;
+}  
+.container#about h2{
+    display: inline-block;
+    margin-top: 40vh;
+    line-height: 0.9;
+    border-bottom: 0.5vh solid hsl(203, 93%, 85%);
+}
+.container#about p{
+    margin-top: 4vh;
+}
+.container#about #last{
+    padding-bottom: 40vh;
+}
