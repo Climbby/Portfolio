@@ -9,6 +9,7 @@
 }
 .container#about p{
     margin-top: 4vh;
+    padding-right: 9vw;
 }
 .container#about #last{
     padding-bottom: 40vh;

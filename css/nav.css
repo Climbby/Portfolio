@@ -1,13 +1,20 @@
 nav{
-    display: block;
+    display: grid;
     position: sticky;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: stretch;
+    white-space: nowrap;
     background-color: hsl(0, 0%, 80%);
     opacity: 1;
-    padding: 20px 80px; 
     top: 0;
-    z-index: 99;
+    overflow: auto;
+    z-index: 1;
 }
 nav a{
+    display: flex;
+    margin-right: 0;
+    padding: 1rem;
+    justify-content: center;
     text-decoration: none;
     color: inherit;
 }

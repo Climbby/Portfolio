@@ -1,7 +1,12 @@
 .container#conhecimentos{  
-    height: 35vh;
+    width: 100%;
+    overflow: auto;
 }
 .container#conhecimentos h2{
     margin-left: auto;
-    margin-right: 15vw;
+    padding-right: 9vw;
+}
+.container#conhecimentos p{
+    margin-left: 0;
+    padding: 5rem 9vw;
 }

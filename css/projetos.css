@@ -4,9 +4,9 @@
 .container#projetos #the-projetos{
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
-    grid-column-gap: 80px;
-    grid-row-gap: 80px;
-    padding: 20px 80px;
+    grid-column-gap: 5vw;
+    padding: 1rem 6vw;
+    padding-top: 1.5rem;
     justify-items: center;
     background-color: hsl(0, 0%, 90%);
     overflow: auto;
@@ -58,17 +58,19 @@
 .container#projetos #titles-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    padding: 50px 30px;
-    padding-bottom: 0px;
+    white-space: nowrap;
+    column-gap: 2vw;
+    padding: 3rem 6vw;
+    padding-bottom: 2px; /* to prevent vertical scrollbar to appear */
     justify-items: center;
+    overflow-x: auto;
 }
 .container#projetos .title{
     display: inline-block; /* for blue markdown to stay in place */
     border-bottom: 0.5vh solid hsl(0, 0%, 80%); /* blue markdown */
     line-height: 0.9;
     
-    margin-left: 0px;
+    margin: 0px 0px;
 }
 .container#projetos .title:hover{
     transform: translateY(-2%) scale(1.01, 1.01);
@@ -82,6 +84,7 @@
     position: absolute;
     width: 100%;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 .container#projetos .seccao #github{
     position: absolute;
@@ -96,9 +99,7 @@
 }
 .container#projetos .seccao.visao-geral article{
     display: none;
-    padding-left: 9vw;
-    padding-right: 9vw;
-    padding-top: 60px;
+    padding: 4rem 9vw;
     text-align: justify;
 }
 .container#projetos .seccao.demonstracao article{

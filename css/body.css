@@ -2,7 +2,7 @@ body{
     background-color: hsl(0, 0%, 90%);
     color: hsl(0, 0%, 20%);
     font-family: "Coolvetica-Regular", sans-serif;
-    font-size: 2vw;
+    font-size: clamp(16px, 2.3vw, 30px);
     margin: 0;                                                                       /* This prevents */ 
     padding: 0;                                                                      /* Default Browser Behaviour */
 }
@@ -10,7 +10,7 @@ body *{
     margin: 0;
 }
 body h2{
-    font-size: 2.3vw;
+    font-size: clamp(16px, 2.8vw, 42px);
     letter-spacing: 0.1vw;
     margin-left: 10vw;
 }
