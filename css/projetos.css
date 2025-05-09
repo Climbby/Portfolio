@@ -124,7 +124,7 @@
 
 .carousel{
     position: relative;
-    /* width: clamp(300px, 40vw, 1000px); */
+    width: clamp(300px, 40vw, 500px);
     height: clamp(200px, 30vh, 500px);
     aspect-ratio: 16/9;
     margin: 6vh auto;
