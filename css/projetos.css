@@ -15,8 +15,8 @@
     position: relative;
     display: inline-block;
     border: 5px solid hsl(0, 0%, 20%);
-    border-radius: 30px;
-    
+    border-radius: clamp(10px, 3vw, 30px);
+
     background-color: hsl(0, 0%, 80%);
     overflow: hidden;
 }
@@ -31,7 +31,7 @@
     right: -8px;
     bottom: -1px;
     border: 6px solid rgb(118, 249, 118);
-    border-radius: 40px;
+    border-radius: clamp(15px, 4vw, 40px);
     opacity: 0;
     pointer-events: none;
 }
@@ -52,7 +52,7 @@
 }
 .card h3{
     margin: 5% 10%;
-    font-size: 30px;
+    font-size: clamp(20px, 3vw, 30px);
 }
 
 .container#projetos #titles-container{
@@ -63,7 +63,6 @@
     padding: 3rem 6vw;
     padding-bottom: 2px; /* to prevent vertical scrollbar to appear */
     justify-items: center;
-    overflow-x: auto;
 }
 .container#projetos .title{
     display: inline-block; /* for blue markdown to stay in place */
@@ -81,18 +80,7 @@
 }
 .container#projetos .seccao{
     display: none;
-    position: absolute;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-y: auto;
-}
-.container#projetos .seccao #github{
-    position: absolute;
-    right: 9vw;
-    z-index: 1;
-}
-.container#projetos .seccao #github:hover{
-    transform: translateY(-5%);
+    min-height: 60vh;
 }
 .container#projetos .seccao.visao-geral{
     display: block;
@@ -102,28 +90,44 @@
     padding: 4rem 9vw;
     text-align: justify;
 }
+.container#projetos .seccao.demonstracao{
+    max-height: 60vh;
+}
 .container#projetos .seccao.demonstracao article{
     display: none;
+    max-width: 100%;
     width: 100%;
 }
 .container#projetos .seccao.demonstracao article #link{
-    width: 100%;
-    position: absolute;
+    display: inline-block;
+    padding: 4vw 9vw;
+    max-width: 70vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-decoration: none;
     color: hsl(0, 0%, 70%);
     box-sizing: border-box;
-    overflow-wrap: break-word;
-    font-size: 30px;
-    padding-left: 9vw;
+    font-size: clamp(18px, 3vw, 42px);
 }
 .container#projetos .seccao.demonstracao article #link:hover{
     transform: translateY(-10%) ;
 }
+.container#projetos .seccao #github{
+    float: right;
+    width: clamp(30px, 10vw, 120px);
+    padding-bottom: 3rem;
+    padding-right: 9vw;
+}
+.container#projetos .seccao #github:hover{
+    transform: translateY(-5%);
+}
+
 .carousel{
     position: relative;
-    width: min(500px, 30vw);
+    /* width: clamp(300px, 40vw, 1000px); */
+    height: clamp(200px, 30vh, 500px);
     aspect-ratio: 16/9;
-    margin: 60px auto;
+    margin: 6vh auto;
     overflow: hidden;
     box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.1);
     border-radius: 5px;
@@ -142,7 +146,6 @@
     padding: 10px;
     cursor: pointer;
 }
-
 .prev { 
     visibility: hidden;
     left: 10px; 
@@ -150,38 +153,35 @@
 .next { 
     right: 10px; 
 }
+
 .container#projetos .seccao.tecnologias article{
     display: none;
     grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
-    grid-row-gap: 80px;
-    grid-column-gap: 0px;
-    padding: 0px 80px;
-    height: 100%;
+    padding: 0 5rem;
+    height: 60vh;
     justify-items: center;
 }
 .container#projetos .seccao.tecnologias article .image-wrapper{
     pointer-events: none;
 }
 .container#projetos .seccao.tecnologias article img{
-    position: absolute;
-    top: 60px;
-    transform: translateX(-50%);
-    width: 96px;
+    padding-top: 3rem;
+    width: clamp(20px, 10vw, 150px);
     pointer-events: auto;
 }
 .container#projetos .seccao.tecnologias .image-text{
     position: absolute;
-    bottom: 80px;
+    bottom: 5rem;
     left: 50%;
     margin-left: 0px;
-    font-size: 60px;
+    font-size: clamp(20px, 5vw, 60px);
     color: var(--item-color, hsl(0, 0%, 20%));
     border-bottom: 4px solid hsl(203, 93%, 85%); /* blue markdown */
     transform: translateX(-50%);
     opacity: 0;
 }
 .container#projetos .seccao.tecnologias img:hover{
-    transform: translateX(-50%) scale(1.1);
+    transform: translateY(-10%) scale(1.1);
 }
 .container#projetos .seccao.tecnologias img:hover + .image-text{
     opacity: 1;

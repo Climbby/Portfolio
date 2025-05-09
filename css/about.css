@@ -3,7 +3,7 @@
 }  
 .container#about h2{
     display: inline-block;
-    margin-top: 40vh;
+    margin-top: 20vh;
     line-height: 0.9;
     border-bottom: 0.5vh solid hsl(203, 93%, 85%);
 }
@@ -12,5 +12,5 @@
     padding-right: 9vw;
 }
 .container#about #last{
-    padding-bottom: 40vh;
+    padding-bottom: 20vh;
 }

@@ -1,7 +1,9 @@
+header{
+    min-height: 60vh;
+}
 header #title, body p{
     margin-left: 10vw;
 }
-
 header *{
     margin: 0;
     margin-right: 3vw;
@@ -11,18 +13,19 @@ header nav{
     margin-right: 0;
 }
 header #title{
-    font-size: 8vw;
-    padding-top: 20vh;
+    font-size: clamp(4rem, 7vw, 8rem);
+    padding-top: 10vh;
     letter-spacing: 0.3vw;
 }
 header #subtitle{
-    font-size: 2vw;
-    padding-bottom: 40vh;
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    padding-bottom: 35vh;
+    padding-right: 9vw;
     letter-spacing: 0.1vw;
     opacity: 0.8;
 }
 header #scroll-text{
-    font-size: 2.5vw;
+    font-size: clamp(1.5rem, 2vw, 3rem);
     margin: 0;
     text-align: center;
     padding-bottom: 5vh; 

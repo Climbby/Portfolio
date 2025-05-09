@@ -1,43 +1,12 @@
 const cardsOutline = document.querySelectorAll('.card-outline')
 const seccoes = document.querySelectorAll('#projetos .seccao')
-const titlesContainer = document.querySelector('#projetos #titles-container')
 const titles = document.querySelectorAll('#projetos #titles-container .title')
-const projetos = document.querySelector('.container#projetos')
-const githubs = document.querySelectorAll('.container#projetos .seccao #github')
-const articleLinks = document.querySelectorAll('.container#projetos .seccao.demonstracao article #link')
 const demonstracaoArticles = document.querySelectorAll('.container#projetos .seccao.demonstracao article')
 const prevBtns = document.querySelectorAll('.carousel-control.prev');
 const nextBtns = document.querySelectorAll('.carousel-control.next');
 let demonstracaoArticlesDictionary = {}
 let card_id = "portfolio"
 let title_id = "visao-geral"
-
-// sets size for each section
-function calculate_size(){
-    const projetos__seccao = document.querySelector('#projetos #the-projetos')
-    projetos.style.height = `${titlesContainer.offsetHeight + projetos__seccao.offsetHeight + 500}px`
-    seccoes.forEach(seccao => {
-        seccao.style.height = `${500}px`
-    });
-    git_pos()
-    links_pos()
-}
-//sets git position in sections
-function git_pos(){
-    
-    githubs.forEach(github => {
-        let zeroHeight = 500 - github.offsetHeight
-        github.style.top = `${zeroHeight - 50}px`
-    })
-}
-//sets project link position in demonstration
-function links_pos(){
-    
-    articleLinks.forEach(link => {
-        let zeroHeight = 500 - link.offsetHeight
-        link.style.top = `${zeroHeight - 50}px`
-    })
-}
 
 // show border based on selected project
 cardsOutline.forEach(outline => {
@@ -132,8 +101,6 @@ function change_content(){
         case "demonstracao":
             seccao_content.style.display = "block"
             content.style.display = "inline-block"
-            git_pos()
-            links_pos()
             break
 
         case "tecnologias":
@@ -143,6 +110,4 @@ function change_content(){
 
 }
 
-calculate_size() // sets size for each section
 change_content() // show content based on active title (first tab by default)
-window.addEventListener('resize', calculate_size)
