@@ -124,7 +124,6 @@
 
 .carousel{
     position: relative;
-    width: clamp(300px, 40vw, 500px);
     height: clamp(200px, 30vh, 500px);
     aspect-ratio: 16/9;
     margin: 6vh auto;
@@ -135,6 +134,9 @@
 .carousel img{
     display: block; /* to remove whitespace between images */
     width: 100%;
+}
+.carousel img:hover{
+    cursor: zoom-in;
 }
 .carousel-control {
     position: absolute;
@@ -152,6 +154,27 @@
 }
 .next { 
     right: 10px; 
+}
+/* Style for the full-screen overlay */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: zoom-out;
+}
+
+/* Style for the enlarged image */
+.fullscreen-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
 
 .container#projetos .seccao.tecnologias article{
