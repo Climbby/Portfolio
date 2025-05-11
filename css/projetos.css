@@ -155,26 +155,25 @@
 .next { 
     right: 10px; 
 }
-/* Style for the full-screen overlay */
 .fullscreen-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  cursor: zoom-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: zoom-out;
 }
-
-/* Style for the enlarged image */
-.fullscreen-image {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
+.fullscreen-inner {
+    position: relative;
+    height: 90%;
+    aspect-ratio: 16/9;
+    /* object-fit: contain; */
+    overflow: hidden;
 }
 
 .container#projetos .seccao.tecnologias article{
