@@ -91,7 +91,7 @@
     text-align: justify;
 }
 .container#projetos .seccao.demonstracao{
-    max-height: 60vh;
+    max-width: 100%;
 }
 .container#projetos .seccao.demonstracao article{
     display: none;
@@ -124,7 +124,7 @@
 
 .carousel{
     position: relative;
-    height: clamp(200px, 30vh, 500px);
+    width: clamp(350px, 60vw, 700px);
     aspect-ratio: 16/9;
     margin: 6vh auto;
     overflow: hidden;
@@ -172,7 +172,6 @@
     position: relative;
     height: 90%;
     aspect-ratio: 16/9;
-    /* object-fit: contain; */
     overflow: hidden;
 }
 
