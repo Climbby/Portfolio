@@ -13,7 +13,7 @@ footer #github, footer #linkedin{
     position: absolute;
     top: 50%;                               /* Top edge at 50% of the height */
     transform: translateY(-50%);            /* Image up 50% it's own height */
-    width: 6vw;
+    width: clamp(30px, 10vw, 120px);
     height: auto;
 }
 footer #github{
