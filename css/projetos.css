@@ -170,7 +170,7 @@
 }
 .fullscreen-inner {
     position: relative;
-    height: 90%;
+    width: 90%;
     aspect-ratio: 16/9;
     overflow: hidden;
 }
