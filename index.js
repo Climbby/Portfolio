@@ -1,3 +1,5 @@
+const languages = document.querySelector('.languages')
+const langsButton = document.querySelector('.language-btn')
 const cardsOutline = document.querySelectorAll('.card-outline')
 const seccoes = document.querySelectorAll('#projetos .seccao')
 const titles = document.querySelectorAll('#projetos #titles-container .title')
@@ -34,6 +36,11 @@ titles.forEach(title => {
         
   })
 })
+
+langsButton.addEventListener('click', () => {
+    languages.classList.toggle('active')
+})
+
 
 function carouselButtons(){
     demonstracaoArticles.forEach(article => {

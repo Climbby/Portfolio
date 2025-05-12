@@ -1,25 +1,68 @@
 header{
     min-height: 60vh;
 }
-header #title, body p{
+body p{
     margin-left: 10vw;
-}
-header *{
-    margin: 0;
-    margin-right: 3vw;
     text-align: left;
 }
-header nav{
-    margin-right: 0;
+
+.languages{
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    float: right;
+}
+.language-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 1.3vh 1.3vw;
+    align-items: center;
+    font-family: "Coolvetica-Regular", sans-serif;
+    font-size: clamp(16px, 2.3vw, 30px);
+    gap: 0.5vw;
+    position: relative;
+}
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: white;
+    border: clamp(2px, 0.2vw, 4px) solid hsl(0, 0%, 85%);
+    border-radius: clamp(5px, 0.5vw, 20px);
+    font-size: clamp(12px, 1.3vw, 20px);
+    padding: 1vh 1vw;
+    z-index: 1;
+
+}
+.language-dropdown a {
+    padding: 8px 12px;
+    display: block;
+    white-space: nowrap;
+}
+.languages.active .language-dropdown{
+    display: block;
+}
+
+header img{
+    width: clamp(20px, 3vw, 40px);
+}
+header #arrow{
+    width: clamp(6px, 1vw, 15px);
 }
 header #title{
+    margin-left: 8vw;
     font-size: clamp(4rem, 7vw, 8rem);
-    padding-top: 10vh;
+    padding-top: 25vh;
     letter-spacing: 0.3vw;
 }
 header #subtitle{
     font-size: clamp(1.5rem, 2vw, 4rem);
-    padding-bottom: 35vh;
+    padding-bottom: 30vh;
+    margin-left: 8vw;
     padding-right: 9vw;
     letter-spacing: 0.1vw;
     opacity: 0.8;
