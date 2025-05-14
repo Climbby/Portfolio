@@ -22,6 +22,7 @@
 }
 .card-outline{
     position: relative;
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 .card-outline::after{
     content: "";
@@ -189,6 +190,10 @@
     padding-top: 3rem;
     width: clamp(20px, 10vw, 150px);
     pointer-events: auto;
+    filter: grayscale(20%);
+    transition: 
+        transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 1.1),
+        filter 0.4s ease-out;
 }
 .container#projetos .seccao.tecnologias .image-text{
     position: absolute;
@@ -200,9 +205,11 @@
     border-bottom: 4px solid hsl(203, 93%, 85%); /* blue markdown */
     transform: translateX(-50%);
     opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 .container#projetos .seccao.tecnologias img:hover{
-    transform: translateY(-10%) scale(1.1);
+    transform: translateY(-3%) scale(1.05);
+    filter: grayscale(0%) drop-shadow(0 5px 15px rgba(0,0,0,0.1)); /* Full color + shadow */
 }
 .container#projetos .seccao.tecnologias img:hover + .image-text{
     opacity: 1;
