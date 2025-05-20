@@ -7,8 +7,3 @@ Welcome to my portfolio! I'm passionate about crafting digital experiences and s
 - EN **[English Version](https://climbby.github.io/Portfolio/en/)**  
 - PT **[Versão em Português](https://climbby.github.io/Portfolio/pt/)**  
 
-## 🧰 Tech Stack
-
-```bash
-Languages:       JavaScript | HTML | CSS
-Version Control:  Git
